@@ -1,5 +1,15 @@
 import os
 
+lst_trabajadores = []
+dct_trabajador = {
+    "dni": "",
+    "nombres_apellidos": "",
+    "sexo": "",
+    "edad": "",
+    "anio_ingreso": "",
+    "salario": ""    
+}
+
 while True:
     os.system("cls")
     print("GESTION DE TRABAJADORES")
