@@ -21,6 +21,7 @@ while True:
     print("1. Componente. Registrar trabajador")
     print("2. Componente. Listar trabajadores")
     print("3. Componente. Consultar trabajador")
+    print("4. Componente. Eliminar trabajador")
 
     opcion = int(input("\nIngrese una opción vía su código numérico: "))
 
@@ -60,7 +61,7 @@ while True:
             print("=================================")
             print("COMPONENTE. LISTA DE TRABAJADORES")
             print("=================================")
-            print("\nOpciones:")
+            print("\nOpciones:\n")
             print("0. Volver")
             print("1. Acción. Listar trabajadores")
             
@@ -83,14 +84,13 @@ while True:
                     print(f"{trabajador["anio_ingreso"]:<14}", end=" ")
                     print(f"{trabajador["salario"]:<7}")
                 input("\nPulse la tecla 'ENTER' para continuar.")
-    
     elif opcion == 3:
         while True:
             os.system("cls")
             print("==================================")
             print("COMPONENTE. CONSULTA DE TRABAJADOR")
             print("==================================")
-            print("\nOpciones:")
+            print("\nOpciones:\n")
             print("0. Salir")
             print("1. Acción. Consultar trabajador")
 
@@ -123,3 +123,40 @@ while True:
                     print(f"\n¡Trabajador, con DNI: {dni_a_buscar}, no registrado!")
                 
                 input("\nPulse la tecla 'ENTER' para continuar.")
+    elif opcion == 4:
+        while True:
+            os.system("cls")
+            print("=====================================")
+            print("COMPONENTE. ELIMINACION DE TRABAJADOR")
+            print("=====================================")
+            print("\nOpciones:\n")
+            print("0. Volver")
+            print("1. Acción. Eliminar trabajador")
+            opcion = int(input("\nIngrese una opción vía su código numérico: "))
+            if opcion == 0:
+                break
+            elif opcion == 1:
+                os.system("cls")
+                print("---------------------------")
+                print("ACCION. ELIMINAR TRABAJADOR")
+                print("---------------------------")
+
+                dni_a_eliminar = input("\nIngrese el DNI del trabajador a eliminar: ")
+
+                for ind, trabajador in enumerate(lst_trabajadores):
+                    if trabajador["dni"] == dni_a_eliminar:
+                        tpl_eliminacion = (True, ind, trabajador)
+                    else:
+                        tpl_eliminacion = (False, None)
+
+                if tpl_eliminacion[0]:
+                    confirmacion_de_eliminacion = input(f"\n¿Está seguro que desea eliminar el registro del trabajador cuyo DNI es {dni_a_eliminar}? (S/N): ").upper()
+                    if confirmacion_de_eliminacion == 'N':
+                        continue
+                    else:
+                        indice = tpl_eliminacion[1]
+                        del lst_trabajadores[indice]
+                        print(f"\n¡Registro del trabajador con DNI '{dni_a_eliminar}' eliminado!")
+                        input("\nPresione la tecla 'ENTER' para continuar.")
+                else:
+                    print(f"\n¡Trabajador, con DNI: {dni_a_eliminar}, no registrado!")
