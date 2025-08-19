@@ -28,9 +28,15 @@ while True:
             print("¡Opción numérica incorrecta!. Vuelva a intentarlo.")
 
     if opcion == 0:
+        os.system("cls")
         print("¡Usted salió del programa!")
         break
     else:
-        os.system("cls")
-        print("REGISTRO DE TRABAJADORES")
-        print("------------------------")
+        while True:
+            os.system("cls")
+            print("REGISTRO DE TRABAJADORES")
+            print("------------------------")
+            opcion = input("Ingrese 000 para volver al menú de opciones: ")
+            if opcion == '000':
+                break
+            
