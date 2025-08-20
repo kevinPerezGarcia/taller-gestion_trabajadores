@@ -10,8 +10,11 @@ dct_trabajador = {
     "salario": ""    
 }
 
-while True:
+def limpiar_consola() -> None:
     os.system("cls")
+
+while True:
+    limpiar_consola()
     print("################################")
     print("SISTEMA. GESTION DE TRABAJADORES")
     print("################################")
@@ -27,12 +30,12 @@ while True:
     opcion = int(input("\nIngrese una opción vía su código numérico: "))
 
     if opcion == 0:
-        os.system("cls")
+        limpiar_consola()
         print("¡Usted salió del programa!\n")
         break
     elif opcion == 1:
         while True:
-            os.system("cls")
+            limpiar_consola()
             print("====================================")
             print("COMPONENTE. REGISTRO DE TRABAJADORES")
             print("====================================")
@@ -58,7 +61,7 @@ while True:
                 input("\n¡Trabajador registrado! Presione cualquier tecla para continuar.")
     elif opcion == 2:
         while True:
-            os.system("cls")
+            limpiar_consola()
             print("=================================")
             print("COMPONENTE. LISTA DE TRABAJADORES")
             print("=================================")
@@ -71,7 +74,7 @@ while True:
             if opcion == 0:
                 break
             elif opcion == 1:
-                os.system("cls")
+                limpiar_consola()
                 print("---------------------")
                 print("LISTA DE TRABAJADORES")
                 print("---------------------\n")
@@ -87,7 +90,7 @@ while True:
                 input("\nPulse la tecla 'ENTER' para continuar.")
     elif opcion == 3:
         while True:
-            os.system("cls")
+            limpiar_consola()
             print("==================================")
             print("COMPONENTE. CONSULTA DE TRABAJADOR")
             print("==================================")
@@ -99,7 +102,7 @@ while True:
             if opcion == 0:
                 break
             elif opcion == 1:
-                os.system("cls")
+                limpiar_consola()
                 print("----------------------------")
                 print("ACCION. CONSULTAR TRABAJADOR")
                 print("----------------------------")
@@ -126,7 +129,7 @@ while True:
                 input("\nPulse la tecla 'ENTER' para continuar.")
     elif opcion == 4:
         while True:
-            os.system("cls")
+            limpiar_consola()
             print("=====================================")
             print("COMPONENTE. ELIMINACION DE TRABAJADOR")
             print("=====================================")
@@ -137,7 +140,7 @@ while True:
             if opcion == 0:
                 break
             elif opcion == 1:
-                os.system("cls")
+                limpiar_consola()
                 print("---------------------------")
                 print("ACCION. ELIMINAR TRABAJADOR")
                 print("---------------------------")
@@ -163,7 +166,7 @@ while True:
                     print(f"\n¡Trabajador, con DNI: {dni_a_eliminar}, no registrado!")
     elif opcion == 5:
         while True:
-            os.system("cls")
+            limpiar_consola()
             print("======================================")
             print("COMPONENTE. MODIFICACION DE TRABAJADOR")
             print("======================================")
@@ -176,7 +179,7 @@ while True:
             if opcion == 0:
                 break
             elif opcion == 1:
-                os.system("cls")
+                limpiar_consola()
                 print("----------------------------------")
                 print("ACCION. MODIFICACION DE TRABAJADOR")
                 print("----------------------------------")
