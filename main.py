@@ -30,13 +30,8 @@ def interfaz() -> None:
     opcion = int(input("\nIngrese una opción vía su código numérico: "))
     return opcion
 
-while True:
-    opcion = interfaz()
-    if opcion == 0:
-        limpiar_consola()
-        print("¡Usted salió del programa!\n")
-        break
-    elif opcion == 1:
+
+def registrar_trabajador() -> None:
         while True:
             os.system("cls")
             print("====================================")
@@ -62,6 +57,14 @@ while True:
                 lst_trabajadores.append(dct_trabajador.copy())
 
                 input("\n¡Trabajador registrado! Presione cualquier tecla para continuar.")
+
+
+while True:
+    opcion = interfaz()
+    if opcion == 0:
+        break
+    elif opcion == 1:
+        registrar_trabajador()
     elif opcion == 2:
         while True:
             limpiar_consola()
