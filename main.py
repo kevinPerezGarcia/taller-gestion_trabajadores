@@ -13,7 +13,7 @@ dct_trabajador = {
 def limpiar_consola() -> None:
     os.system("cls")
 
-while True:
+def interfaz() -> None:
     limpiar_consola()
     print("################################")
     print("SISTEMA. GESTION DE TRABAJADORES")
@@ -28,14 +28,17 @@ while True:
     print("5. Componente. Modificar trabajador")
 
     opcion = int(input("\nIngrese una opción vía su código numérico: "))
+    return opcion
 
+while True:
+    opcion = interfaz()
     if opcion == 0:
         limpiar_consola()
         print("¡Usted salió del programa!\n")
         break
     elif opcion == 1:
         while True:
-            limpiar_consola()
+            os.system("cls")
             print("====================================")
             print("COMPONENTE. REGISTRO DE TRABAJADORES")
             print("====================================")
