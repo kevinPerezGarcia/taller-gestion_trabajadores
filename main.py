@@ -1,3 +1,5 @@
+from modulos.interfaz import interfaz
+
 def main() -> None:
     while True:
         opcion = interfaz()
@@ -15,4 +17,5 @@ def main() -> None:
             modificar_trabajador()
 
 
-main()
+if __name__ == "__main__":
+    main()
