@@ -1,6 +1,7 @@
 from modulos.interfaz import interfaz
 from modulos.registrar import registrar_trabajador
 from modulos.listar import listar_trabajadores
+from modulos.consultar import consultar_trabajador
 
 lst_trabajadores = []
 
@@ -14,7 +15,7 @@ def main() -> None:
         elif opcion == 2:
             listar_trabajadores(lst_trabajadores)
         elif opcion == 3:
-            consultar_trabajador()
+            consultar_trabajador(lst_trabajadores)
         elif opcion == 4:
             eliminar_trabajador()
         elif opcion == 5:
