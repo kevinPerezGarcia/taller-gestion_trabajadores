@@ -1,4 +1,7 @@
 from modulos.interfaz import interfaz
+from modulos.registrar import registrar_trabajador
+
+lst_trabajadores = []
 
 def main() -> None:
     while True:
@@ -6,7 +9,7 @@ def main() -> None:
         if opcion == 0:
             break
         elif opcion == 1:
-            registrar_trabajador()
+            registrar_trabajador(lst_trabajadores)
         elif opcion == 2:
             listar_trabajadores()
         elif opcion == 3:
