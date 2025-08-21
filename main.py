@@ -3,6 +3,7 @@ from modulos.registrar import registrar_trabajador
 from modulos.listar import listar_trabajadores
 from modulos.consultar import consultar_trabajador
 from modulos.eliminar import eliminar_trabajador
+from modulos.modificar import modificar_trabajador
 
 lst_trabajadores = []
 
@@ -20,7 +21,7 @@ def main() -> None:
         elif opcion == 4:
             eliminar_trabajador(lst_trabajadores)
         elif opcion == 5:
-            modificar_trabajador()
+            modificar_trabajador(lst_trabajadores)
 
 
 if __name__ == "__main__":

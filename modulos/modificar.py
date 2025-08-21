@@ -1,4 +1,8 @@
-def modificar_trabajador() -> None:
+from utils import limpiar_consola
+
+dct_trabajador = {}
+
+def modificar_trabajador(lst_trabajadores) -> None:
     while True:
         limpiar_consola()
         print("======================================")
