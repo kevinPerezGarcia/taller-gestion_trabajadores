@@ -1,5 +1,3 @@
-import os
-
 lst_trabajadores = []
 dct_trabajador = {
     "dni": "",
@@ -10,8 +8,6 @@ dct_trabajador = {
     "salario": ""    
 }
 
-def limpiar_consola() -> None:
-    os.system("cls")
 
 def interfaz() -> None:
     limpiar_consola()
